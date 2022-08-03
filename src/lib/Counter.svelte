@@ -9,8 +9,6 @@
     osDevice.update(n => n = platform);
     
     if(/Android/.test(userAgent)) {
-      alert(code);
-      alert(userAgent);
       osDevice.update(n => n = userAgent);
     }
 
@@ -38,7 +36,7 @@
   }
 
   const openAppAndroid = () => {
-    window.location.replace('ebloqsur://');
+    window.location.replace('Ebloqs://');
   }
   getOS();
 </script>
