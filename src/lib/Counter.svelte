@@ -36,7 +36,7 @@
   }
 
   const openAppAndroid = () => {
-    window.location.replace('Ebloqs://');
+    window.location.replace('ebloqsurl://https://ebloqs-validate.netlify.app');
   }
   getOS();
 </script>
