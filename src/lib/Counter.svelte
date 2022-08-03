@@ -7,8 +7,14 @@
     const platform = window.navigator?.platform || window.navigator?.platform;
     const iosPlatforms = ['iPhone', 'iPad', 'iPod'];
     osDevice.update(n => n = platform);
+    
+    if(/Android/.test(userAgent)) {
+      alert(code);
+      alert(userAgent);
+      osDevice.update(n => n = userAgent);
+    }
 
-    const response = await fetch('http://localhost:3000/user/validate', {
+    const response = await fetch('https://agile-beach-41948.herokuapp.com/user/validate', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -23,22 +29,16 @@
 
     const jsonRespo = JSON.parse(newRes);
     if(response.ok) {
-  
       statusMessage.update(n => n = jsonRespo['message']);
-      
     } else {
       statusMessage.update(n => n = jsonRespo['message']);
     }
 
 
-    if(/Android/.test(userAgent)) {
-      alert(code);
-      alert(userAgent);
-    }
   }
 
   const openAppAndroid = () => {
-    window.location.replace('market://details?id=com.myapp.package');
+    window.location.replace('ebloqsur://');
   }
   getOS();
 </script>
