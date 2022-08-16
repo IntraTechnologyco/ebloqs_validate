@@ -9,7 +9,7 @@
     osDevice.update(n => n = platform);
     
     if(/Android/.test(userAgent)) {
-      osDevice.update(n => n = userAgent);
+      osDevice.update(n => n = `${userAgent} confirmado`);
     }
 
     const response = await fetch('https://agile-beach-41948.herokuapp.com/user/validate', {
@@ -31,8 +31,6 @@
     } else {
       statusMessage.update(n => n = jsonRespo['message']);
     }
-
-
   }
 
   const openAppAndroid = () => {
