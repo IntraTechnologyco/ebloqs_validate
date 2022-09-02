@@ -12,7 +12,7 @@
       osDevice.update(n => n = `${userAgent} confirmado`);
     }
 
-    const response = await fetch('http://3.139.233.142:3000/user/validate', {
+    const response = await fetch('https://api.ebloqs.com/docs/user/validate', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
